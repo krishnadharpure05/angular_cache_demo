@@ -1,0 +1,38 @@
+<h2>User Data</h2>
+
+<div *ngIf="error">
+  <p style="color:red"> Failed to load User data</p>
+</div>
+
+<div *ngIf="!error">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Address</th>
+    </tr>
+    <tr *ngFor="let user of userData">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.company}}</td>
+      <td>{{user.address}}</td>
+    </tr>
+  </table>
+<br>
+<br>
+  <table>
+    <tr>
+      <th>Company Id</th>
+      <th>Company Name</th>
+      <th>Employee Count</th>
+      <th>Industry</th>
+    </tr>
+    <tr *ngFor="let company of companyData">
+      <td>{{company.id}}</td>
+      <td>{{company.name}}</td>
+      <td>{{company.employeeCount}}</td>
+      <td>{{company.industry}}</td>
+    </tr>
+  </table>
+</div>

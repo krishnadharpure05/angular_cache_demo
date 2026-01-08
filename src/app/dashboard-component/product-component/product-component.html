@@ -1,0 +1,39 @@
+<h2>Product Data</h2>
+
+<div *ngIf="error">
+  <p style="color:red"> Failed to load Product data</p>
+</div>
+<!-- https://dummy-json.mock.beeceptor.com/posts -->
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Count</th>
+  </tr>
+
+  <tr *ngFor = "let product of productData">
+    <td>{{product.id}}</td>
+    <td>{{product.title}}</td>
+    <td>{{product.body}}</td>
+    <td>{{product.comment_count}}</td>
+  </tr>
+</table>
+<br>
+<br>
+<!-- https://dummy-json.mock.beeceptor.com/continents -->
+<table>
+  <tr>
+    <th>Continent Code</th>
+    <th>Continent Name</th>
+    <th>Population</th>
+    <th>Countries Count</th>
+  </tr>
+
+  <tr *ngFor = "let continent of continentData">
+    <td>{{continent.code}}</td>
+    <td>{{continent.name}}</td>
+    <td>{{continent.population}}</td>
+    <td>{{continent.countries}}</td>
+  </tr>
+</table>

@@ -1,0 +1,11 @@
+<p>User Data Loaded</p>
+
+<div *ngFor="let user of usersList">
+    <p><strong>ID:</strong>{{user.id}}</p>
+    <p><strong>Name:</strong>{{user.name}}</p>
+    <p><strong>Company:</strong>{{user.company}}</p>
+    <p><strong>Address:</strong>{{user.address}}</p>
+</div>
+
+<p *ngIf="usersList && usersList.length == 0"> No Records Found </p>
+
